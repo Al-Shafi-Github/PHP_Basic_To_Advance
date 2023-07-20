@@ -13,12 +13,18 @@ session_Start();
 
 <body>
     <h2> Welcome to Home Page</h2>
-    <a href="session.php">This goes to login page</a>
+    <form action="home.php" method="post">
+        <input type="submit" name="logout" value="logout">
+    </form>
 </body>
 
 </html>
 
 <?php
-$_SESSION["username"];
-$_SESSION["password"];
+echo $_SESSION["username"] . "<br>";
+echo $_SESSION["password"] . "<br>";
+if (isset($_POST["logout"])) {
+    session_destroy();
+    header("Location: index.php");
+}
 ?>

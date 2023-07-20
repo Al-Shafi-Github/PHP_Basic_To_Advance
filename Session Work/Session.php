@@ -12,13 +12,28 @@ session_Start();
 </head>
 
 <body>
-    <h2> Welcome to Login Page</h2>
-    <a href="home.php">This goes to home page</a>
+    <form action="index.php" method="post">
+        username:<br>
+        <input type="text" name="username"><br>
+        password: <br>
+        <input type="text" name="password"><br>
+        <input type="submit" name="login" value="login">
+    </form>
 </body>
 
 </html>
 
-<?Php
-$_SESSION["username"] = 'Shafi';
-$_SESSION["password"] = '123456';
+<?php
+if (isset($_POST["login"])) {
+    if (
+        !empty($_POST["username"]) &&
+        !empty($_POST["password"])
+    ) {
+        $_SESSION["username"] = $_POST["username"];
+        $_SESSION["password"] = $_POST["password"];
+        header("Location: home.php");
+    } else {
+        echo "Missing username/password <br>";
+    }
+}
 ?>
