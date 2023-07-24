@@ -2,7 +2,7 @@
 $myXMLData =
     "<?xml version='1.0' encoding='UTF-8'?>
 <note>
-<to>Jr assistant</to>
+<to>Sr assistant</to>
 <from>Shafi</from>
 <heading>Reminder</heading>
 <body>Do not forget to submit your paper!</body>
