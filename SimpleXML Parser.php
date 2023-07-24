@@ -5,7 +5,7 @@ $myXMLData =
 <to>Jr assistant</to>
 <from>Shafi</from>
 <heading>Reminder</heading>
-<body>Don't forget to submit your paper!</body>
+<body>Do not forget to submit your paper!</body>
 </note>";
 
 $xml = simplexml_load_string($myXMLData) or die("Error: Cannot create object");
